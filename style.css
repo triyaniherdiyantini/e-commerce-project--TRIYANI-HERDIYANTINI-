@@ -1,0 +1,151 @@
+:root {
+    /* Warna-warna yang dipakai di website */
+    --primary: #A2678A;    /* Warna utama, dipakai di header dan navigasi */
+    --accent: #F8C8DC;     /* Warna tombol dan saat hover */
+    --bg-light: #FADADD;   /* Warna latar belakang halaman */
+    --text: #444444;       /* Warna teks */
+    --highlight: #F7E7CE;  /* Warna aksen lembut */
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+  }
+  
+  body {
+    margin: 0;  /* Hilangkan jarak tepi browser */
+    font-family: 'Segoe UI', sans-serif; /* Jenis huruf */
+    color: var(--text);  /* Warna teks */
+    background-color: var(--bg-light); /* Warna latar belakang */
+  }
+  
+  .container {
+    display: flex;  /* Membuat elemen di dalamnya berjajar */
+    justify-content: space-between;  /* Jarak antar elemen dibagi rata */
+    align-items: center;  /* Elemen rata tengah secara vertikal */
+    flex-wrap: wrap;  /* Jika ruang tidak cukup, elemen bisa turun ke bawah */
+  }
+  
+  header {
+    background-color: var(--primary);  /* Warna latar header */
+    color: white;  /* Warna tulisan putih */
+    padding: 15px 20px;  /* Jarak dalam header */
+  }
+  
+  .logo {
+    font-size: 24px;  /* Ukuran tulisan logo */
+  }
+  
+  nav {
+    display: flex;  /* Menu navigasi berjajar */
+    align-items: center;  /* Rata tengah vertikal */
+    gap: 15px;  /* Jarak antar menu */
+  }
+  
+  .nav-menu {
+    list-style: none;  /* Hilangkan bullet list */
+    display: flex;  /* Menu horizontal */
+    gap: 15px;  /* Jarak antar item */
+    padding: 0;  /* Hilangkan padding */
+    margin: 0;  /* Hilangkan margin */
+  }
+  
+  .nav-menu li a {
+    color: white;  /* Warna link */
+    text-decoration: none;  /* Hilangkan garis bawah */
+    font-weight: bold;  /* Tulisan tebal */
+    transition: color 0.3s ease;  /* Animasi saat hover */
+  }
+  
+  .nav-menu li a:hover {
+    color: var(--accent);  /* Warna berubah saat hover */
+  }
+  
+  .cart-icon {
+    font-size: 22px;  /* Ukuran icon keranjang */
+    color: white;  /* Warna icon */
+    margin-left: 15px;  /* Jarak kiri */
+  }
+  
+  .produk-section {
+    padding: 30px 20px;  /* Jarak dalam bagian produk */
+    text-align: center;  /* Teks rata tengah */
+  }
+  
+  .produk-grid {
+    display: grid;  /* Membuat grid untuk produk */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Kolom fleksibel minimal 240px */
+    gap: 20px;  /* Jarak antar produk */
+    margin-top: 20px;  /* Jarak atas grid */
+  }
+  
+  .produk {
+    background: white;  /* Latar putih untuk tiap produk */
+    padding: 15px;  /* Jarak dalam tiap produk */
+    border-radius: 10px;  /* Sudut membulat */
+    box-shadow: var(--shadow);  /* Bayangan halus */
+    transition: transform 0.2s ease;  /* Animasi saat hover */
+  }
+  
+  .produk:hover {
+    transform: translateY(-5px);  /* Produk naik sedikit saat hover */
+  }
+  
+  .produk img {
+    width: 100%;  /* Gambar penuh lebar produk */
+    border-radius: 8px;  /* Sudut gambar membulat */
+    margin-bottom: 10px;  /* Jarak bawah gambar */
+  }
+  
+  .harga {
+    font-weight: bold;  /* Tulisan harga tebal */
+    color: var(--primary);  /* Warna harga */
+  }
+  
+  .btn {
+    background-color: var(--accent);  /* Warna tombol */
+    color: var(--text);  /* Warna tulisan tombol */
+    border: none;  /* Hilangkan border */
+    padding: 8px 15px;  /* Jarak dalam tombol */
+    border-radius: 6px;  /* Sudut tombol membulat */
+    cursor: pointer;  /* Pointer berubah saat hover */
+    transition: background 0.3s ease;  /* Animasi warna tombol */
+  }
+  
+  .btn:hover {
+    background-color: #f3b2cd;  /* Warna tombol saat hover */
+  }
+  
+  .kategori, .tentang {
+    padding: 20px;  /* Jarak dalam bagian kategori dan tentang */
+    background-color: var(--highlight);  /* Warna latar bagian ini */
+    border-radius: 10px;  /* Sudut membulat */
+    margin: 20px;  /* Jarak luar */
+  }
+  
+  .kategori ul {
+    list-style: circle;  /* Bullet list lingkaran */
+    padding-left: 20px;  /* Jarak kiri */
+  }
+  
+  footer {
+    background: #f0d9e7;  /* Warna latar footer */
+    text-align: center;  /* Teks rata tengah */
+    padding: 15px;  /* Jarak dalam */
+    margin-top: 30px;  /* Jarak atas footer */
+    color: var(--text);  /* Warna teks footer */
+  }
+  
+  /* Responsif untuk layar kecil (hp/tablet) */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;  /* Susun elemen vertikal */
+      align-items: flex-start;  /* Rata kiri */
+    }
+  
+    .nav-menu {
+      flex-direction: column;  /* Menu jadi vertikal */
+      align-items: flex-start;  /* Rata kiri */
+    }
+  
+    .produk-grid {
+      grid-template-columns: 1fr;  /* Produk satu kolom */
+    }
+  }
+  
