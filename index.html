@@ -1,90 +1,187 @@
 <!DOCTYPE html>
-<html lang="id"> <!-- Dokumen HTML mulai, bahasa Indonesia -->
+<html lang="id">
 <head>
-  <meta charset="UTF-8"> <!-- Atur karakter supaya bisa pakai huruf lengkap -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Biar responsive di HP -->
-  <title>trriyanishop</title> <!-- Judul halaman yang muncul di tab browser -->
-  <link rel="stylesheet" href="style.css"> <!-- Hubungkan ke file CSS untuk desain -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>trriyanishop</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header> <!-- Bagian atas halaman, biasanya untuk judul dan menu -->
-    <div class="container"> <!-- Pembungkus agar mudah diatur tampilannya -->
-      <h1 class="logo">TH-KULINER</h1> <!-- Nama toko / logo -->
-      <nav> <!-- Menu navigasi utama -->
-        <ul class="nav-menu"> <!-- Daftar menu -->
-          <li><a href="#beranda">Beranda</a></li> <!-- Link ke bagian Beranda -->
-          <li><a href="#produk">Produk</a></li> <!-- Link ke bagian Produk -->
-          <li><a href="#keranjang">Keranjang</a></li> <!-- Link ke bagian Keranjang -->
-          <li><a href="#kontak">Kontak</a></li> <!-- Link ke bagian Kontak -->
+  <header>
+    <div class="container">
+      <h1 class="logo">TH-KULINER</h1>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#produk">Produk</a></li>
+          <li><a href="#keranjang">Keranjang</a></li>
+          <li><a href="#kontak">Kontak</a></li>
         </ul>
-        <a href="#keranjang" class="cart-icon">🛒</a> <!-- Icon keranjang belanja -->
+        <a href="#keranjang" class="cart-icon">🛒</a>
       </nav>
     </div>
   </header>
 
-  <main> <!-- Bagian isi utama halaman -->
-    <section id="produk" class="produk-section"> <!-- Bagian produk dengan id untuk navigasi -->
-      <h2>Produk Unggulan</h2> <!-- Judul produk -->
-      <div class="produk-grid"> <!-- Tempat produk disusun grid -->
-        
-        <!-- Satu produk -->
-        <article class="produk"> 
-          <img src="https://nibble-images.b-cdn.net/nibble/original_images/monsieur_spoon_menu_1_a66b31e444_H2Erg1B2x.jpg" alt="Kaos Polos"> <!-- Gambar produk -->
-          <h3>Cromboloni</h3> <!-- Nama produk -->
-          <p> cita rasa klasik Italia dengan kombinasi kacang dengan rasa red valvet</p> <!-- Deskripsi produk -->
-          <p class="harga">Rp25.000</p> <!-- Harga produk -->
-          <button class="btn">Tambah ke Keranjang</button> <!-- Tombol tambah ke keranjang -->
+  <main>
+    <section id="produk" class="produk-section">
+      <h2>Produk Unggulan</h2>
+      <div class="produk-grid">
+
+        <article class="produk">
+          <img src="https://nibble-images.b-cdn.net/nibble/original_images/monsieur_spoon_menu_1_a66b31e444_H2Erg1B2x.jpg" alt="Cromboloni">
+          <h3>Cromboloni</h3>
+          <p>cita rasa klasik Italia dengan kombinasi kacang dengan rasa red velvet</p>
+          <p class="harga">Rp25.000</p>
+          <button class="btn" data-nama="Cromboloni" data-harga="25000">Tambah ke Keranjang</button>
         </article>
 
-        <!-- Produk lain dengan struktur sama -->
         <article class="produk">
-          <img src="https://tse2.mm.bing.net/th?id=OIP.wkJ-hkwPOiZ1qkeXteV2twHaLG&pid=Api&P=0&h=180" alt="Headset">
+          <img src="https://tse2.mm.bing.net/th?id=OIP.wkJ-hkwPOiZ1qkeXteV2twHaLG&pid=Api&P=0&h=180" alt="Bomboloni">
           <h3>Bomboloni</h3>
           <p>baluran gula halus di bagian luarnya, cita rasanya kian manis dan nikmat di setiap gigitan</p>
           <p class="harga">Rp23.000</p>
-          <button class="btn">Tambah ke Keranjang</button>
+          <button class="btn" data-nama="Bomboloni" data-harga="23000">Tambah ke Keranjang</button>
         </article>
 
         <article class="produk">
-          <img src="https://images.eatsmarter.com/sites/default/files/styles/max_size/public/steamed-dim-sum-493553.jpg" alt="Jam Tangan">
-          <h3>Dimsum </h3>
-          <p>Dimsum, hidangan khas China yang terkenal dengan beragam hidangan kecil yang dihidangkan dalam keranjang bambu, telah menjadi bagian tak terpisahkan dari kebudayaan kuliner</p>
+          <img src="https://images.eatsmarter.com/sites/default/files/styles/max_size/public/steamed-dim-sum-493553.jpg" alt="Dimsum">
+          <h3>Dimsum</h3>
+          <p>hidangan khas China yang terkenal dengan berbagai variasi isi dan rasa</p>
           <p class="harga">Rp17.000</p>
-          <button class="btn">Tambah ke Keranjang</button>
+          <button class="btn" data-nama="Dimsum" data-harga="17000">Tambah ke Keranjang</button>
         </article>
 
         <article class="produk">
-          <img src="https://www.bitemybun.com/wp-content/uploads/2021/03/Japanese-mochi-rice-balls.jpg" alt="Dompet Kulit">
-          <h3>Mochi lumer</h3>
-          <p>kue Jepang yang terbuat dari beras ketan, ditumbuk lembut dan lengket, dan dibentuk bulat.</p>
+          <img src="https://www.bitemybun.com/wp-content/uploads/2021/03/Japanese-mochi-rice-balls.jpg" alt="Mochi">
+          <h3>Mochi Lumer</h3>
+          <p>kue Jepang yang lembut, kenyal, dan manis dengan isian meleleh</p>
           <p class="harga">Rp15.000</p>
-          <button class="btn">Tambah ke Keranjang</button>
+          <button class="btn" data-nama="Mochi Lumer" data-harga="15000">Tambah ke Keranjang</button>
         </article>
 
         <article class="produk">
-          <img src="https://www.cookingclassy.com/wp-content/uploads/2018/08/bolognese-4.jpg" alt="Tote Bag">
-          <h3>Bolognese sauce</h3>
-          <p>spaghetti yang dimasak dengan saus bolognese, yaitu saus daging yang kaya akan cita rasa umami dan gurih.</p>
+          <img src="https://www.cookingclassy.com/wp-content/uploads/2018/08/bolognese-4.jpg" alt="Bolognese">
+          <h3>Bolognese Sauce</h3>
+          <p>spaghetti dengan saus daging khas Italia yang kaya rasa</p>
           <p class="harga">Rp30.000</p>
-          <button class="btn">Tambah ke Keranjang</button>
+          <button class="btn" data-nama="Bolognese Sauce" data-harga="30000">Tambah ke Keranjang</button>
         </article>
+
       </div>
     </section>
-    
-    <section id="kategori" class="kategori"> <!-- Bagian kategori produk -->
-      <h2>Kategori</h2> <!-- Judul kategori -->
-      <ul> <!-- Daftar kategori -->
+
+    <section id="kategori" class="kategori">
+      <h2>Kategori</h2>
+      <ul>
         <li>BAKERY</li>
         <li>CEMILAN</li>
         <li>ITALIAN FOOD</li>
       </ul>
     </section>
+
+    <section id="keranjang" class="keranjang-section">
+      <h2>Keranjang Belanja</h2>
+      <div id="keranjang-list"></div>
+      <p id="total-harga">Total: Rp0</p>
+    </section>
   </main>
 
-  <footer> <!-- Bagian bawah halaman -->
-    <p>&copy; Dibuat oleh TRIYANI HERDIYANTINI </p> <!-- Informasi hak cipta -->
+  <footer>
+    <p>&copy; Dibuat oleh TRIYANI HERDIYANTINI</p>
   </footer>
+
+  <!-- Script Interaktif -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll(".btn");
+      const cartIcon = document.querySelector(".cart-icon");
+      const keranjangList = document.getElementById("keranjang-list");
+      const totalHargaEl = document.getElementById("total-harga");
+
+      let keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
+
+      updateCartIcon();
+      tampilkanKeranjang();
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", function () {
+          const nama = this.dataset.nama;
+          const harga = parseInt(this.dataset.harga);
+
+          const index = keranjang.findIndex(item => item.nama === nama);
+          if (index !== -1) {
+            keranjang[index].jumlah += 1;
+          } else {
+            keranjang.push({ nama, harga, jumlah: 1 });
+          }
+
+          simpanKeranjang();
+          updateCartIcon();
+          tampilkanKeranjang();
+          showNotification(`${nama} ditambahkan ke keranjang!`);
+        });
+      });
+
+      function simpanKeranjang() {
+        localStorage.setItem("keranjang", JSON.stringify(keranjang));
+      }
+
+      function updateCartIcon() {
+        let totalItem = keranjang.reduce((sum, item) => sum + item.jumlah, 0);
+        if (!document.querySelector(".cart-count")) {
+          const span = document.createElement("span");
+          span.classList.add("cart-count");
+          cartIcon.appendChild(span);
+        }
+        document.querySelector(".cart-count").textContent = totalItem;
+      }
+
+      function tampilkanKeranjang() {
+        keranjangList.innerHTML = "";
+        let totalHarga = 0;
+
+        if (keranjang.length === 0) {
+          keranjangList.innerHTML = "<p>Keranjang masih kosong.</p>";
+        } else {
+          keranjang.forEach((item, index) => {
+            totalHarga += item.harga * item.jumlah;
+
+            const div = document.createElement("div");
+            div.className = "item-keranjang";
+            div.innerHTML = `
+              <span>${item.nama} (x${item.jumlah}) - Rp${item.harga * item.jumlah}</span>
+              <button data-index="${index}" class="hapus-btn">Hapus</button>
+            `;
+            keranjangList.appendChild(div);
+          });
+        }
+
+        totalHargaEl.textContent = "Total: Rp" + totalHarga;
+        aturEventHapus();
+      }
+
+      function aturEventHapus() {
+        document.querySelectorAll(".hapus-btn").forEach(button => {
+          button.addEventListener("click", function () {
+            const index = this.dataset.index;
+            keranjang.splice(index, 1);
+            simpanKeranjang();
+            updateCartIcon();
+            tampilkanKeranjang();
+          });
+        });
+      }
+
+      function showNotification(message) {
+        const notif = document.createElement("div");
+        notif.className = "notif";
+        notif.textContent = message;
+        document.body.appendChild(notif);
+        setTimeout(() => notif.remove(), 2000);
+      }
+    });
+  </script>
 
 </body>
 </html>
